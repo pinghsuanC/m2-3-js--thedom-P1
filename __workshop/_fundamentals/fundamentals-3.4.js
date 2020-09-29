@@ -9,6 +9,14 @@
 
 function sum(arr) {
   // Your code here
+  let s = 0;
+  for(let n=0; n<arr.length; n++){
+    if(typeof(arr[n])!=="number"){
+      return undefined;
+    }
+    s+=arr[n];
+  }
+  return s;
 }
 
 // Part 2 - Test

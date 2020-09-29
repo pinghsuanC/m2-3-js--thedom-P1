@@ -13,6 +13,16 @@
 
 function repeat(arr) {
   // Your code here
+  // check
+  if(arr.length!==2 || typeof(arr[0])!=="string" || typeof(arr[1])!=="number" || arr[1]%1!==0 ) {  // also check for float
+    return undefined;
+  }
+  // check empty string
+  if(arr[1]<=0){
+    return "";
+  }
+  //normal case
+  return arr[0].repeat(arr[1]);
 }
 
 // Part 2 - Test

@@ -11,6 +11,11 @@
 
 function getLetterAtIndex(str, index) {
   // Your code here
+  // check input
+  if(typeof(str)!=="string" || str.length===0 || index >= str.length){    // assume index starts with 0
+    return undefined;
+  }
+  return str[index];
 }
 
 // Part 2 - Test

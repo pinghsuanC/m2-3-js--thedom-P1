@@ -12,6 +12,22 @@
 
 function sum(arr) {
   // Your code here
+  //test input
+  //length
+  if(arr.length!==2){
+    return undefined;
+  }
+  //content
+  let s = 0;
+  for(let n = 0; n<arr.length; n++) {            // looping through array
+    if(typeof(arr[n])!=="number"){   // check type, if any none-number turns out return undefined.
+      return undefined;
+    }
+    s+=arr[n];                       // adding each to s
+  };
+
+  //return results if nothing happens above.
+  return s;
 }
 
 // Part 2 - Test

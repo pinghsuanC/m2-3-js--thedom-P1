@@ -7,6 +7,15 @@
 
 function reverseIt(str) {
   // Your code here
+  // check
+  if(typeof(str)!=="string"){
+    return undefined;
+  }
+  if(str===""){
+    return "";
+  }
+
+  return str.split("").reverse().join("");
 }
 
 // Part 2 - Test

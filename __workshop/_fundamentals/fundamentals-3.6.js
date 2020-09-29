@@ -19,6 +19,25 @@
 
 function calculator(arr) {
   // Your code here
+  // checks
+  if(arr.length!==3 || typeof(arr[0])!=="string" || typeof(arr[1])!="number" || typeof(arr[2])!="number"){
+    return undefined;
+  }
+  switch(arr[0]){
+    case "add":
+      return arr[1]+arr[2];
+    case "sub":
+      return arr[1]-arr[2];
+    case "mul":
+      return arr[1]*arr[2];
+    case "div":
+      if(arr[2]===0){   // 0 divisor not allowed
+        return undefined;
+      }
+      return Math.trunc(arr[1]/arr[2]); // if numbers are negatives trunc would work as well.
+    default:
+      return undefined;
+  }
 }
 
 // Part 2 - Test

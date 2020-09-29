@@ -16,6 +16,23 @@
 
 function longestWord(str) {
   // Place solution here
+  // check input
+  if(typeof(str)!=="string"){
+    return undefined;
+  }
+  //empty
+  if(str==="" || str.length===1){
+    return str;
+  }
+  //counting length! assuming that each words are seperated by only one space...
+  let lar_word = "";
+  let arr = str.split(" ");
+  arr.forEach(element => {
+    if(element.length>=lar_word.length){
+      lar_word=element;  // reassign largest word if length is equal or larger (since if equal you want last one)
+    }
+  });
+  return lar_word;
 }
 
 // Part 2 - Test

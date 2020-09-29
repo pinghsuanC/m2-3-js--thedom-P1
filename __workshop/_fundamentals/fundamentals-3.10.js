@@ -9,6 +9,16 @@
 
 function makeIntoTitle(sentence) {
   // Your code here
+  // check input
+  if(typeof(sentence)!=="string"){
+    return undefined;
+  }
+  let arr = sentence.split(" ");
+  for(let n = 0; n<arr.length; n++){
+    arr[n] = arr[n].charAt(0).toUpperCase() + arr[n].slice(1);
+  }
+
+  return arr.join(" ");
 }
 
 // Part 2 - Test
