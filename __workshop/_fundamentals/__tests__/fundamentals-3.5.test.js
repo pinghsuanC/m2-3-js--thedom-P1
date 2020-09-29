@@ -9,6 +9,7 @@ test("Exercise 5", () => {
   expect(getLetterAtIndex(33, 2)).toBe(undefined);
   expect(getLetterAtIndex("", 2)).toBe(undefined);
   expect(getLetterAtIndex("", 0)).toBe(undefined);
+  expect(getLetterAtIndex("kdjg3gg", 4)).toBe(undefined);
 });
 
 // More info on jest expect: https://jestjs.io/docs/en/expect

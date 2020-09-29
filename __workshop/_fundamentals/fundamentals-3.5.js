@@ -12,7 +12,7 @@
 function getLetterAtIndex(str, index) {
   // Your code here
   // check input
-  if(typeof(str)!=="string" || str.length===0 || index >= str.length){    // assume index starts with 0
+  if(typeof(str)!=="string" || str.length===0 || index >= str.length || !isNaN(str[index])){    // assume index starts with 0
     return undefined;
   }
   return str[index];
